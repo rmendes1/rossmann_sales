@@ -25,14 +25,17 @@
 
 
 # Table of Contents
-<p align="center">
-  <a href="#description">Description</a> •
-  <a href="#dataset">Dataset</a> •
-  <a href="#tools">Tools</a> •
-  <a href="#steps">Steps</a> •  
-  <a href="#conclusion">Conclusion</a> •
-  <a href="#next-steps">Next Steps</a> •
-  <a href="#license">License</a>
+<p align="left">
+ • <a href="#description">Description</a> </br>
+ • <a href="#dataset">Dataset</a> </br>
+ • <a href="#tools">Tools</a> </br>
+ • <a href="#steps">Steps</a> </br>  
+ • <a href="#exploratory-data-analysis-results">Exploratory Data Analysis Results</a> </br>
+ • <a href="#machine-learning-models">Machine Learning Models</a> </br>
+ • <a href="#error-translation-into-a-business-approach">Error Translation into a Business Approach</a> </br>
+ • <a href="#telegram-bot">Telegram Bot</a> </br>	
+ • <a href="#conclusion-and-next-steps">Conclusion and Next Steps</a> </br>
+ • <a href="#license">License</a>
 </p>
 
 
@@ -52,7 +55,7 @@ Given the business situation, an important question must be answered:
 - The dataset for this project has been extracted from Kaggle's Rossmann Prediction Sales' competition. 
 - This dataset an all the pieces of information regarding it can be found at https://www.kaggle.com/c/rossmann-store-sales
 
-- Files
+## Files and Attributes
 
 | Files     | Description                                                                                                                                                                                              |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -60,7 +63,6 @@ Given the business situation, an important question must be answered:
 | test.csv             | historical data excluding Sales |
 | sample_submission.csv             | a sample submission file in the correct format |
 | store.csv             | supplemental information about the stores |
-
 
 - Most of the data fields are self-explanatory. The following are descriptions for those that aren't.
 
@@ -83,10 +85,12 @@ Given the business situation, an important question must be answered:
 |Promo2Since[Year/Week]     | describes the year and calendar week when the store started 	participating in Promo2  |                                                                                                                        
 | PromoInterval  | describes the consecutive intervals Promo2 is started, naming the months the promotion is started anew. E.g. "Feb,May,Aug,Nov" means each round starts in February, May, August, November of any given year for that store  |                                                                                                                        
 
-# Tools
+# **Tools**
 ![Python](https://img.shields.io/badge/-Python-007396?style=flat-square&logo=python&logoColor=ffffff)
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter-FFA500?style=flat-square&logo=jupyter&logoColor=ffffff)
+![Heroku Cloud](https://img.shields.io/badge/-Heroku%20Cloud-7F00FF?style=flat-square&logo=heroku&logoColor=%23ffffff)
 
-# Steps
+# **Steps**
 In this project we will follow the CRISP-DM Proccess of Development, which consists in:
 - **Business understanding**
   - _What is the motivation?_
@@ -117,7 +121,7 @@ In this project we will follow the CRISP-DM Proccess of Development, which consi
   - To enable the stores revenue query at any time using your Telegram account. 
 
 
-# Exploratory Data Analysis Results
+# **Exploratory Data Analysis Results**
 - For the purpose of briefness, only the univariate and multivariate analysis are showed in this readme. For more info, check https://github.com/rmendes1/rossmann_sales/blob/main/eda.ipynb.
 
 ## Univariate Analysis
@@ -136,7 +140,7 @@ In this project we will follow the CRISP-DM Proccess of Development, which consi
 <img alt="RossmannProj" title="#ResponseVariable" src="/fig/corr_MA_categorical.png" />
 
 
-# Machine Learning Models
+# **Machine Learning Models**
 ## Performance Results
 For this project, 5 models were trained and had their performances compared:
  - Average Model
@@ -157,28 +161,39 @@ Random search was used to find optimal parameters, which gives us the following 
 <p align = "center">Image 6 - ML Algorithms Performance Comparison </p>
 <img alt="RossmannProj" title="#Hyperparameter Fine-tuning" src="/fig/model_tuning.png" />
 
-# Error Translation into a Business Approach
+# **Error Translation into a Business Approach**
 After all these steps, it is time to answer the question we were here for: _How much revenue will the stores make in the next 6 weeks?_
 This table was generated to show some store samples of the model prediction comparing them with their most optimistic/pessimistic revenue and their respective error rate.
 
 <p align = "center">Image 7 - ML Algorithms Performance Comparison </p>
 <img src="/fig/prediction_samples.png" />
 
-As a more general analysis, down below is the total revenue that would be done by the stores.
+As a more general analysis, down below is the total revenue that would be done by the stores and the prediction plot.
 
-<p align = "center"> Image 7 - ML Algorithms Performance Comparison </p>
+<p align = "center"> Image 8 - Final Revenue Scenario </p>
 <p align = "center"> <img src="/fig/total_scenario.png" />  </p>
 
+<p align = "center">Image 9 - Predictions over time </p>
+<img src="/fig/prediction_plot.png" />
+
+# **Telegram Bot**
+To access the bot contact, click here:
+
+[![Telegram](https://img.shields.io/badge/-TELEGRAM-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/rossmannjr_bot)
 
 
-# Conclusion
-- TBD. put the graph predictions here and the telegram bot imgs
+To use the bot, you need to type the store number in the chat. Then, the bot will tell you the prediction for that store.
+If the store number does not exist, it will show the store is not available for query.
+
+<p align = "center">Image 9 - Predictions over time </p>
+<img alt="RossmannProj" title="#TelegramBot" src="/fig/bot_print.png" />
+
+# **Conclusion and Next Steps**
+- Given that this is the first CRISP-DM iteration cycle, there is a relatively good performance, considering the error to be approximately 10% (MAPE).
+- Some stores have higher error values that can be improved in the next cycle separetely.
 	
-	
-# Next steps
-- TBD
 
-# License
+# **License**
 
 This project is under MIT License.
 
