@@ -1,7 +1,7 @@
 
 
 <h1 align="center">
-    <img alt="RossmannProj" title="#RossmannSales" src="rossmann_img.png" />
+    <img alt="RossmannProj" title="#RossmannSales" src="/fig/rossmann_img.png" />
 </h1>
 
 <h4 align="center"> 
@@ -85,7 +85,6 @@ Given the business situation, an important question must be answered:
 
 # Tools
 ![Python](https://img.shields.io/badge/-Python-007396?style=flat-square&logo=python&logoColor=ffffff)
-![SQLite](https://img.shields.io/badge/-SQLite-5CB3FF?style=flat-square&logo=sqlite)
 
 # Steps
 In this project we will follow the CRISP-DM Proccess of Development, which consists in:
@@ -116,6 +115,29 @@ In this project we will follow the CRISP-DM Proccess of Development, which consi
   - To publish the model in a cloud environment so others can have access to it.   
 - **Creation of a Telegram Bot**
   - To enable the stores revenue query at any time using your Telegram account. 
+
+
+# Exploratory Data Analysis Results
+- For the purpose of briefness, only the univariate and multivariate analysis are showed in this readme. For more info, check https://github.com/rmendes1/rossmann_sales/blob/main/eda.ipynb.
+
+## Univariate Analysis
+<p align = "center">Image 1 - Response Variable Distribution</p>
+<img alt="RossmannProj" title="#ResponseVariable" src="/fig/response_variable_UA.png" />
+<p align = "center">Image 2 - Numerical Variables Distribution</p>	
+<img alt="RossmannProj" title="#NumericvalVariables" src="/fig/num_variables_UA.png" />
+<p align = "center">Image 3 - Categorical Variables Distribution</p>
+<img alt="RossmannProj" title="#CategoricalVariables" src="/fig/cat_variables_UA.png" />
+
+
+## Multivariate Analysis
+<p align = "center">Image 4 - Pearson Correlation for Numerical Variables</p>
+<img alt="RossmannProj" title="#ResponseVariable" src="/fig/corr_MA_numerical.png" />
+<p align = "center">Image 4 - Cramer's V matrix for Categorical Variables</p>
+<img alt="RossmannProj" title="#ResponseVariable" src="/fig/corr_MA_categorical.png" />
+
+
+# Machine Learning Models
+
 
 # Conclusion
 - TBD
