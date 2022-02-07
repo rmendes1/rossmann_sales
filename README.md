@@ -107,7 +107,7 @@ In this project we will follow the CRISP-DM Proccess of Development, which consi
   - Variable Filtering/Selection: To select the variables that are more relevant for the prediction model. **Boruta Feature Selector** was used here to define the best variables.
 - **ML Algorithms implementation**
   - Set the models to be used and calculate their performances for this specific problem. 
-- **Hyperparameter Finetuning**
+- **Hyperparameter Fine-tuning**
   - To find the conjunct of parameters that maximize the model learning process.
 - **Interpretation of the ML Algorithm and Error translation**
   - To estimate if the model is accurate enough and tell how much revenue it will bring to the company.  
@@ -137,10 +137,42 @@ In this project we will follow the CRISP-DM Proccess of Development, which consi
 
 
 # Machine Learning Models
+## Performance Results
+For this project, 5 models were trained and had their performances compared:
+ - Average Model
+ - Linear Regression Model
+ - Linear Regression Regularized Model (Lasso)
+ - Random Forest Regressor
+ - XGBoost Regressor
+
+The results after cross-validation has been performed were:
+<p align = "center">Image 5 - ML Algorithms Performance Comparison </p>
+<img alt="RossmannProj" title="#Machine Learning Algorithms Results" src="/fig/ML_results_1.png" />
+
+Even though the Random Forest Regressor had the best model performance reached, we will select
+XGBoost for the analysis, since it is less robust in terms of memory space in our local machine and the differences in performance are not so distant. However, in a server application scenario, Random Forest Regressor would be the most preferable choice.
+
+## Hyperparameter Fine-tuning
+Random search was used to find optimal parameters, which gives us the following result:
+<p align = "center">Image 6 - ML Algorithms Performance Comparison </p>
+<img alt="RossmannProj" title="#Hyperparameter Fine-tuning" src="/fig/model_tuning.png" />
+
+# Error Translation into a Business Approach
+After all these steps, it is time to answer the question we were here for: _How much revenue will the stores make in the next 6 weeks?_
+This table was generated to show some store samples of the model prediction comparing them with their most optimistic/pessimistic revenue and their respective error rate.
+
+<p align = "center">Image 7 - ML Algorithms Performance Comparison </p>
+<img src="/fig/prediction_samples.png" />
+
+As a more general analysis, down below is the total revenue that would be done by the stores.
+
+<p align = "center"> Image 7 - ML Algorithms Performance Comparison </p>
+<p align = "center"> <img src="/fig/total_scenario.png" />  </p>
+
 
 
 # Conclusion
-- TBD
+- TBD. put the graph predictions here and the telegram bot imgs
 	
 	
 # Next steps
